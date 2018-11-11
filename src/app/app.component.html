@@ -1,0 +1,51 @@
+
+<div class="main-container">
+    <div class="content-container">
+        <div class="content-area">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="card-header">
+                           <div class="event-header">
+                              <div class="event-heading">Event time line</div>
+                            <div class="event-apps"><button class="btn btn-link"><clr-icon shape="plus"style="border: 1px solid;border-radius: 3px;padding: 1px;margin-right: 5px;"></clr-icon>&nbsp;Add Event</button></div>
+                           </div>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-title">
+                                <div class="timeline-header">
+                                    <div class="timeline-heading">Oct 29  - Nov 1</div>
+                                  <div class="timeline-oper"></div>
+                                 </div>
+                            </div>
+                            <div class="card-text">
+                                <section class="evt-timeline">
+                                    <div class="evt-timeline__container">
+                                      <div class="evt-timeline__block " *ngFor="let timeLine of timeLineData;">
+                                        <div class="evt-timeline__icon">
+                                        </div>
+                                        <div class="evt-timeline__content ">
+                                          <div class="activity-heading">
+                                              <h2>{{timeLine.title}}</h2>
+                                              <p>{{timeLine.timeActivity}}</p>
+                                              <ul *ngFor="let activityItem of timeLine.activities">
+                                                  <li>{{activityItem}}</li>
+                                              </ul>
+                                          </div>
+                                          <span class="evt-timeline__date">{{timeLine.dateVal}}</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
